@@ -30,6 +30,8 @@
         // Slot returns null if the page or device does not support interstitials.
         if (interstitialSlot) {
           // Enable optional interstitial triggers and register the slot.
+                // Add KEY-VALUE targeting here
+          interstitialSlot.setTargeting("queryString", "interstitial_test");
           interstitialSlot.addService(googletag.pubads()).setConfig({
             interstitial: {
               triggers: {
